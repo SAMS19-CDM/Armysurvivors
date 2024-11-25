@@ -11,25 +11,62 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-/* Estilo para títulos */
-h1, h2, h3 {
+/* Contenedor de la página */
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
   color: var(--title-color);
-  margin: 20px 0;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Estilo para los párrafos y texto en general */
-p {
+/* Estilo para los botones */
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--button-color);
   color: var(--text-color);
-  line-height: 1.6;
-  margin-bottom: 15px;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s ease;
+  width: 250px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Estilo para enlaces */
+.btn:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-5px);
+}
+
+/* Estilo para enlaces (añadido para consistencia) */
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -39,25 +76,27 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Estilo para botones */
-button {
-  background-color: var(--button-color);
-  color: var(--text-color);
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--button-hover-color);
-}
-
-/* Estilo de pie de página (footer) */
+/* Estilo para pie de página */
 footer {
   background-color: var(--button-color);
   color: var(--text-color);
   text-align: center;
   padding: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Adaptabilidad para dispositivos pequeños */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    width: 200px;
+  }
 }

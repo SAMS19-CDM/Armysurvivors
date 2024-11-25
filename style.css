@@ -1,4 +1,4 @@
-/* Establecer el fondo con un degradado de verde militar a negro */
+/* Estilos generales para el cuerpo de la página */
 body {
   margin: 0;
   padding: 0;
@@ -8,27 +8,29 @@ body {
   color: white;
 }
 
-/* Estilo para los botones en verde fluor */
-button {
-  background-color: #00FF00;  /* Verde fluor */
-  border: none;
+/* Estilos para los enlaces que se comportan como botones */
+a.btn {
+  display: inline-block;         /* Para que se comporten como un bloque */
+  background-color: #00FF00;     /* Verde fluor */
   padding: 10px 20px;
   font-size: 16px;
-  color: black;  /* Color del texto del botón */
+  color: black;                  /* Texto negro */
+  text-decoration: none;         /* Quitar el subrayado de los enlaces */
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;            /* Alineación del texto dentro del botón */
+  cursor: pointer;               /* Mostrar la mano al pasar el cursor */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
 }
 
-button:hover {
-  background-color: #00CC00;  /* Verde fluor un poco más oscuro al pasar el cursor */
-  transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+a.btn:hover {
+  background-color: #00CC00;     /* Verde un poco más oscuro al pasar el ratón */
+  transform: scale(1.05);         /* Efecto de agrandar el botón al hacer hover */
 }
 
-button:focus {
-  outline: none; /* Eliminar borde de enfoque */
+a.btn:focus {
+  outline: none;                 /* Eliminar borde de enfoque al hacer clic */
 }
 
-button:active {
-  background-color: #009900;  /* Verde más oscuro al hacer clic */
+a.btn:active {
+  background-color: #009900;     /* Verde aún más oscuro al hacer clic */
 }

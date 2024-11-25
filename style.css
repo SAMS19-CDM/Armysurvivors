@@ -1,36 +1,63 @@
-/* Estilos generales para el cuerpo de la página */
+/* Definir colores */
+:root {
+  --background-color: #28a745; /* Fondo verde */
+  --title-color: #fdd835;      /* Títulos amarillos */
+  --text-color: #ffffff;      /* Texto blanco */
+  --button-color: #000000;    /* Botones negros */
+  --button-hover-color: #333; /* Hover de botones */
+}
+
+/* Estilo general */
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background: linear-gradient(to bottom, #4B5320, #000000); /* Verde militar a negro */
-  font-family: Arial, sans-serif;
-  color: white;
 }
 
-/* Estilos para los enlaces que se comportan como botones */
-a.btn {
-  display: inline-block;         /* Para que se comporten como un bloque */
-  background-color: #00FF00;     /* Verde fluor */
-  padding: 10px 20px;
-  font-size: 16px;
-  color: black;                  /* Texto negro */
-  text-decoration: none;         /* Quitar el subrayado de los enlaces */
+/* Estilo para títulos */
+h1, h2, h3 {
+  color: var(--title-color);
+  margin: 20px 0;
+}
+
+/* Estilo para los párrafos y texto en general */
+p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Estilo para enlaces */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para botones */
+button {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 25px;
   border-radius: 5px;
-  text-align: center;            /* Alineación del texto dentro del botón */
-  cursor: pointer;               /* Mostrar la mano al pasar el cursor */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+  font-size: 16px;
+  cursor: pointer;
 }
 
-a.btn:hover {
-  background-color: #00CC00;     /* Verde un poco más oscuro al pasar el ratón */
-  transform: scale(1.05);         /* Efecto de agrandar el botón al hacer hover */
+button:hover {
+  background-color: var(--button-hover-color);
 }
 
-a.btn:focus {
-  outline: none;                 /* Eliminar borde de enfoque al hacer clic */
-}
-
-a.btn:active {
-  background-color: #009900;     /* Verde aún más oscuro al hacer clic */
+/* Estilo de pie de página (footer) */
+footer {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
 }

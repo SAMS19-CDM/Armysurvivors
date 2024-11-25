@@ -1,78 +1,34 @@
-/* Estilo general */
+/* Establecer el fondo con un degradado de verde militar a negro */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #3c4a34, #000000); /* Degradado de verde militar a negro */
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #4B5320, #000000); /* Verde militar a negro */
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
-/* Fondo de la página */
-.welcome h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-/* Estilo de los botones */
+/* Estilo para los botones en verde fluor */
 button {
-    padding: 15px 30px;
-    font-size: 18px;
-    margin: 20px;
-    cursor: pointer;
-    background-color: #000000;  /* Botones de color negro */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  background-color: #00FF00;  /* Verde fluor */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;  /* Color del texto del botón */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover para botones */
 button:hover {
-    background-color: #4CAF50;  /* Cambiar a verde al pasar el ratón */
+  background-color: #00CC00;  /* Verde fluor un poco más oscuro al pasar el cursor */
+  transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
 }
 
-/* Deshabilitar botones */
-button:disabled {
-    background-color: #333;  /* Botón deshabilitado de color gris oscuro */
-    cursor: not-allowed;
+button:focus {
+  outline: none; /* Eliminar borde de enfoque */
 }
 
-/* Estilo para la contenedora principal */
-.main-container {
-    margin-top: 50px;
-    flex: 1;
-}
-
-/* Contenedor de la información de minería */
-.mining-info {
-    margin-top: 40px;
-}
-
-/* Estilo para mostrar el tiempo restante y balance */
-#balance, #timeLeft, #miningProgress {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-/* Para las páginas secundarias */
-.buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-button + button {
-    margin-top: 10px;
-}
-
-/* Formatear los textos y el título */
-h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);  /* Agregar sombra al texto para mayor visibilidad */
+button:active {
+  background-color: #009900;  /* Verde más oscuro al hacer clic */
 }

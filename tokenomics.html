@@ -1,46 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Token Distribution</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #4b5320, #000);
-            color: white;
-        }
-        .chart-container {
-            width: 50%;
-            max-width: 600px;
-            position: relative;
-        }
-        .info-box {
-            display: none;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border-radius: 5px;
-            position: absolute;
-            top: 50%;
-            left: 70%;
-            transform: translate(-50%, -50%);
-        }
-        .info-box.visible {
-            display: block;
-        }
-    </style>
+    <title>Tokenomics - Army Survivors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-    </body>
-    
-    <div class="chart-container">
-        <canvas id="myChart"></canvas>
-        <div id="infoBox" class="info-box"></div>
+<body>
+    <!-- Contenedor principal de la página -->
+    <div class="main-container">
+        <h1>Tokenomics</h1>
+
+        <div class="chart-container">
+            <!-- Aquí va el gráfico de distribución de tokens -->
+            <canvas id="myChart"></canvas>
+            <div id="infoBox" class="info-box"></div>
+        </div>
+
+        <!-- Botones para navegar -->
+        <button onclick="window.location.href='mining.html'">Back to Mining</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -64,7 +42,7 @@
                     '#ff9800', // Liquidity
                     '#9575cd'  // Team
                 ],
-                hoverOffset: 15 // Expands segments on hover
+                hoverOffset: 15 // Expande los segmentos al pasar el ratón
             }]
         };
 
@@ -75,7 +53,7 @@
                 responsive: true,
                 plugins: {
                     tooltip: {
-                        enabled: false // Disable default tooltip of Chart.js
+                        enabled: false // Deshabilitar el tooltip predeterminado de Chart.js
                     },
                 },
                 onHover: (event, elements) => {
@@ -85,7 +63,7 @@
                         const label = data.labels[index];
                         const percentage = data.datasets[0].data[index];
                         
-                        // Detailed information for each section
+                        // Información detallada para cada sección
                         const infoText = {
                             'Market Makers and DEX & CEX (15%)': '15% allocated to Market Makers and DEX & CEX.',
                             'First Airdrop (10%)': '10% reserved for the first airdrop.',

@@ -4,93 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ROADMAP</title>
-    <style>
-        /* Asegura que el fondo cubra todo el alto de la pantalla */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 130%;
-            background: linear-gradient(to bottom, #4b5320, #000000); /* Degradado de verde militar a negro */
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Aseguramos que el contenido ocupe el 100% de la altura disponible */
-        .container {
-            min-height: 100vh; /* Asegura que el contenido cubra toda la pantalla */
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Estilo del encabezado */
-        header {
-            text-align: center;
-            padding: 50px 0;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        /* Estilo de las secciones */
-        section {
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-            flex: 1; /* Esto permite que el contenido ocupe todo el espacio disponible entre el encabezado y el pie de página */
-        }
-
-        .title {
-            font-weight: bold;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #FFD700; /* Color dorado para resaltar títulos */
-        }
-
-        .content {
-            margin-bottom: 20px;
-        }
-
-        .content ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .content li {
-            margin: 5px 0;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #FFD700; /* Resaltado dorado para ciertas palabras */
-        }
-
-        /* Estilo del pie de página */
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            background-color: #333;
-            color: white;
-        }
-
-    </style>
+    <title>ROADMAP - Army Survivors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header -->
+    <!-- Contenedor principal de la página -->
+    <div class="main-container">
+        <!-- Encabezado de la página -->
         <header>
             <h1>ROADMAP</h1>
         </header>
 
-        <!-- Main Content -->
+        <!-- Contenido principal del roadmap -->
         <section>
             <div class="content">
-                <div class="title">Q4/2024: first phase of the airdrop</div>
+                <div class="title">Q4/2024: First Phase of the Airdrop</div>
                 <ul>
                     <li>First Airdrop $ASC and NFTs.</li>
                     <li>Additional incentives for users who participate in staking.</li>
@@ -110,7 +39,7 @@
             </div>
 
             <div class="content">
-                <div class="title">Q2/2025: Development of Web Game 3 </div>
+                <div class="title">Q2/2025: Development of Web Game 3</div>
                 <ul>
                     <li>Start development of the Web 3 game with integration of $ASC and NFTs.</li>
                     <li>Internal game testing with the community.</li>
@@ -128,7 +57,12 @@
 
             <div class="content">
                 <div class="title">Q4/2025: SOON</div>
+                <p>Stay tuned for more updates!</p>
             </div>
+        </section>
+
+        <!-- Botón de navegación para volver a la página de minería -->
+        <button onclick="window.location.href='mine.html'">Back to Mining</button>
     </div>
 
 </body>

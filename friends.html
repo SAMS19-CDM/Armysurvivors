@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friends - Army Survivors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor principal de la página -->
+    <div class="main-container">
+        <header>
+            <h1>Friends</h1>
+        </header>
+
+        <!-- Contenido principal de la página -->
+        <section>
+            <!-- Sección de amigos invitados -->
+            <div class="content">
+                <div class="title">Invita Amigos y Gana $ASC</div>
+                <p>Por cada amigo que invites, recibirás 5,000 $ASC.</p>
+                <p><strong>Amigos Invitados:</strong> <span id="friendsCount">0</span></p>
+                <p><strong>Recompensa Acumulada:</strong> <span id="rewardAmount">0</span> $ASC</p>
+            </div>
+
+            <!-- Enlace de referido único -->
+            <div class="content">
+                <div class="title">Tu Enlace de Referido</div>
+                <p>Comparte este enlace con tus amigos para invitarlos:</p>
+                <input type="text" id="referralLink" value="https://army-survivors.com?ref=uniqueID" readonly>
+                <button onclick="copyReferralLink()">Copiar Enlace</button>
+            </div>
+
+            <!-- Botón para regresar a la página de minería -->
+            <button onclick="window.location.href='index.html'">Back to Main</button>
+        </section>
+    </div>
+
+    <script>
+        // Función para simular el enlace de referido único
+        const referralBaseURL = "https://army-survivors.com?ref=";
+
+        // Simulamos que el usuario tiene un enlace de referido único
+        // En un escenario real, este valor se obtendría del backend (usando un ID de usuario o token)
+        const userUniqueID = Math.random().toString(36).substring(2, 12); // Generamos un ID único aleatorio
+
+        // Mostrar el enlace de referido
+        document.getElementById('referralLink').value = referralBaseURL + userUniqueID;
+
+        // Función para copiar el enlace al portapapeles
+        function copyReferralLink() {
+            const referralInput = document.getElementById('referralLink');
+            referralInput.select();
+            document.execCommand('copy');
+            alert("Enlace copiado al portapapeles.");
+        }
+
+    </script>
+</body>
+</html>

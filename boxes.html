@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXES</title>
+
+    <!-- Cargar Web3.js para interactuar con la red Ethereum y Polygon -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.0/web3.min.js"></script>
+
+    <style>
+        HTML, body {
+            margin: 0;
+            padding: 0;
+            height: 130%;
+            background: linear-gradient(to bottom, #4b5320, #000000); /* Degradado de verde militar a negro */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            padding: 20px;
+            background-color: #222;
+            font-size: 1.5em;
+        }
+        .product {
+            display: inline-block;
+            width: 220px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .price {
+            font-weight: bold;
+            color: #FFD700;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .button:hover {
+            background-color: #FFB700;
+        }
+        .wallet-connect {
+            margin-top: 20px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #222;
+            padding: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Buy your Box ( NFT inside )
+    </header>
+
+    <div id="wallet-connect" class="wallet-connect">
+        <button id="connect-wallet-button" class="button">Connect MetaMask</button>
+    </div>
+
+    <div id="products">
+        <div class="product" id="gold-box">
+            <h3>Gold Box</h3>
+            <p>quatity: 200</p>
+            <p>Price: <span class="price">4.060 $POL</span></p>
+            <button class="button" data-item-id="gold-box">Comprar</button>
+            <p>Content:<p>
+
+            </p>
+                NFT GOLD (value: 2.500 usdt each).</p>
+            <P>$ASC: 25.000</P>
+        </div>
+
+        <div class="product" id="green-box">
+            <h3>Green Box</h3>
+            <p>quatity: 1000</p>
+            <p>Price: <span class="price">1.351 $POL</span></p>
+            <button class="button" data-item-id="green-box">Comprar</button>
+            <P>Content:<p>
+
+            </p> 
+                NFT GOLD (value: 1.000 usdt each).</P>
+            <p>$ASC: 10.000</p>    
+        </div>
+
+        <div class="product" id="white-box">
+            <h3>White Box</h3>
+            <p>quatity: 1800 </p>
+            <p>Price: <span class="price">405 $POL</span></p>
+            <button class="button" data-item-id="white-box">Comprar</button>
+            <p>Content:<p>
+
+            </p> 
+                NFT GOLD (value: 300 usdt each).<p> 
+
+            </p>$ASC: 1.500</p>
+        </div>
+
+        <div class="product" id="rainbow-box">
+            <h3>Rainbow Box</h3>
+            <p>quatity: 790</p>
+            <p>Price: <span class="price">945 $POL</span></p>
+            <button class="button" data-item-id="rainbow-box">Comprar</button>
+            <p>Content:<p>
+                
+            </p> 
+                NFT GOLD (value: 1000/300 usdt each).<p>
+
+                </p>$ASC: 3.500</p>
+        </div>
+    </div>
+
+    <div class="footer">
+       
+    </div>
+
+    <!-- Vincula tu archivo JavaScript -->
+    <script src="box2.js"></script>
+</body>
+</html>

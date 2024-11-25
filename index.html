@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Army Survivors</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, #374315, #2c2c1e);
+        color: #0aee97;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+    <h1>Welcome to Army Survivors</h1>
+    <div class="button-container">
+        <button class="btn" onclick="window.location.href='tokenomics.html'">Tokenomics</button>
+        <button class="btn" onclick="window.location.href='Airdrop.html'">Airdrop</button>
+        <button class="btn" onclick="window.location.href='roadmap.html'">Roadmap</button>
+        <button class="btn" onclick="window.location.href='boxes.html'">BOX</button>
+        <button class="btn" onclick="window.location.href='staking.html'">Staking</button>
+        <button class="btn" onclick="window.location.href='game.html'">Game</button>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
